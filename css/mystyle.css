@@ -1,0 +1,723 @@
+/* reset code and common code starts here  */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-image: url(../assets/images/body-img\(1\).jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    animation-name: body-background;
+    animation-duration: 25s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+body{
+    /* background-image: url(../assets/images/body-img\(1\).jpg);
+    background-size: cover;
+    background-attachment: fixed; */
+    margin : auto;
+    /* animation-name: body-background;
+    animation-duration: 25s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; */
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}  
+
+@keyframes body-background {
+    0%{
+        background-image: url(../assets/images/body-img\(1\).jpg);
+    }
+    25%{
+        background-image: url(../assets/images/body-img\(2\).jpg);
+    }
+    50%{
+        background-image: url(../assets/images/body-img\(3\).jpg);
+    }
+    75%{
+        background-image: url(../assets/images/body-img\(4\).jpg);
+    }
+    100%{
+        background-image: url(../assets/images/body-img\(5\).jpg);
+    }
+}
+
+:root{
+    --primary-color: #33DAC2;
+    --secondary-color: #CACBCF;
+    --tertiary-color: #ffffff;
+    --quaternary-color: #000000;
+    /* --heading-font:  "Roboto Condensed", sans-serif;
+    --btn-font: "Jost", sans-serif; */
+    --border-radius: 5px;
+    --transition: 0.4s ease-in-out;
+}
+
+::selection {
+    background: rgba(52, 227, 201, .3);
+    color: #fff;
+}
+
+::marker{
+    color: var(--primary-color);
+}
+.background-color{
+    background-color: rgba(10, 11,15, 0.9);
+} 
+
+.container-fluid{
+    width : 100%;
+}
+
+.container{
+    width : 80%;
+    margin: 0px auto;
+}
+
+.flexbox{
+    display: flex;
+}
+
+.section-padding{
+    padding: 60px;
+}
+
+.section-gap {
+    margin-top: 100px !important;
+}
+
+#about-section .container, #portfolio-section .container, #service-section .container, #contact-section .container {
+    border-radius:var(--border-radius) ;
+
+}
+/* for heading :  font-family: "Roboto Condensed", sans-serif; */
+/* for btn :   font-family: "Jost", sans-serif; */
+
+/* reset code and common code ends here  */
+
+
+
+/* header section starts */
+header{
+    height : 80px;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+nav{
+    background-color: auto;
+    height: inherit;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.navbar-brand, .nav-icon{
+    flex-basis: 25%;
+}
+
+.navbar-nav{
+    flex-basis: 50%;
+}
+
+/* logo */
+.navbar-brand .logo img {
+    height: auto;
+}
+
+/* navbar-nav */
+.navbar-nav ul {
+    justify-content: center;
+    gap: 40px;
+}
+ 
+.navbar-nav ul li a{
+    color : var(--tertiary-color);
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+    letter-spacing: 0.01rem;
+    line-height: 1.5rem;
+    position: relative;
+}
+
+.navbar-nav ul li a::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    top: 100%;
+    left: 0;
+    background:  var(--tertiary-color);
+    position: absolute;
+    transition: var(--transition);
+}
+
+.navbar-nav ul li a:hover::before{
+    width: 100%;
+}
+/* nav-icon */
+.nav-icon ul{
+    justify-content: flex-end;
+    gap: 0.7rem;
+}
+
+.nav-icon ul li a i{
+    background-color: var(--tertiary-color);
+    color: #000000;
+    font-size: 1rem;
+    padding: 5px !important;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+.nav-icon ul li a i:first-child{
+    padding: 5px 7px;
+}
+
+.nav-icon .fa-instagram:hover{
+    color: #D64164;
+    transform: scale(1.1);
+}
+
+.nav-icon .fa-facebook:hover{
+    color: #0765FF;
+    transform: scale(1.1);
+}
+
+.nav-icon .fa-twitter:hover{
+    color: #1C96E8;
+    transform: scale(1.1);
+}
+
+/* nav toggle */
+.nav-toggle i{
+    color: var(--tertiary-color);
+    font-size:1.5rem ;
+    /* display: none; */
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle{
+    position: relative;
+    display: none;
+}
+
+.nav-toggle .toggle-content{
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    /* padding: 15px 0px; */
+    width: 250px;
+    z-index: 1111;
+}
+
+.nav-toggle .toggle-content ul{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+}
+
+
+.nav-toggle .toggle-content{
+    display: none;
+}
+.nav-toggle .toggle__nav-item ul li a{
+    color: var(--tertiary-color);
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+    letter-spacing: 0.01rem;
+    line-height: 1.5rem;
+    height: inherit;
+}
+
+.nav-toggle .toggle__nav-item ul li{
+    background-color: rgba(10, 11,15, 0.8);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 9px ;
+}
+
+.nav-toggle .toggle__nav-item ul li a:hover{
+    color: var(--primary-color);
+}
+/* header section ends */
+
+
+
+/* main section starts */
+
+/* heading section starts */
+#heading-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#heading-section div{
+    margin: 300px 0px 70px ;
+}
+#heading-section p{
+    color: var(--tertiary-color);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    word-spacing: 0.25rem;
+}
+
+#heading-section h1{
+    color: var(--tertiary-color);
+    font-size: 4.5rem ;
+    letter-spacing: 0.12rem;
+    font-weight: 600;
+    margin-top: 18px;
+    margin-bottom: 40px;
+}
+
+#heading-section .btn{
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+    border: none;
+    border-radius: var(--border-radius) ;
+    padding: 15px 25px;
+    font-size: 1.05rem ;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.01rem;
+    cursor: pointer;
+}
+
+/* heading section ends */
+
+
+/* about section stars */
+
+.about-content{
+    justify-content: space-between;
+}
+.about-img{
+    flex-basis: 45%;
+    margin-right: 15px;
+}
+
+.about-img img{
+    border-radius: var(--border-radius);
+    height: auto;
+    width: 100%;
+}
+.about-text{
+    margin-left: 15px;
+    flex-basis: 55%;
+}
+
+.about-text h2{
+    color: var(--tertiary-color);
+    font-size: 1.90rem;
+    letter-spacing: 0.02rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+}
+
+.about-text p{
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-top: 10px;
+    line-height: 1.7rem;
+    font-weight: 400;
+}
+
+.about-text h3{
+    color: var(--tertiary-color);
+    font-size: 1.4rem ;
+    letter-spacing: 0.01rem;
+    margin: 22px 0px 14px 0px;
+    font-weight: 700;
+}
+.about-text ul{
+    list-style-position: inside;
+}
+
+.about-text ul li{
+    list-style-type: disc;
+    color: var(--secondary-color);
+    line-height: 1.6rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+/* about section ends */
+
+/* portfolio section starts */
+
+
+/* common portfolio & service & conatact section starts */
+.portfolio-text,.service-text{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-text h2, .service-text h2{
+    text-align: center;
+    color: var(--tertiary-color);
+    font-size: 1.90rem;
+    letter-spacing: 0.02rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+}
+
+.portfolio-text p, .service-text p{
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-top: 15px;
+    line-height: 1.7rem;
+    font-weight: 400;
+}
+
+/* common portfolio & service section starts */
+
+.portfolio{
+    margin-top: 40px ;
+}
+.portfolio-nav ul{
+    justify-content: center;
+    gap: 30px;
+}
+.portfolio-nav ul li a{
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+    text-transform: uppercase;
+    padding-bottom: 0.01rem;
+    position: relative;
+}
+
+.portfolio-nav ul li a.active::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 100%;
+    transition: var(--transition);
+}
+
+.portfolio-nav ul li a.active:hover::before{
+    width: 100%;
+}
+
+.portfolio-nav ul li .active::before{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: var(--tertiary-color);
+    position: absolute;
+    top: 100%;
+    transition: var(--transition);
+}
+.portfolio-images{
+    /* background-color: antiquewhite; */
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    
+}
+.portfolio-images img{
+    height: auto;
+    width: 100%;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.portfolio-images img:hover{
+    border: 2px solid var(--tertiary-color);
+    filter: drop-shadow(2px 2px 3px var(--primary-color));
+}
+
+.mix{
+    display: none;
+}
+/* portfolio section ends */
+
+
+/* service scetion starts */
+.service-item{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+.service-item > div {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.service-item i{
+    color: var(--tertiary-color);
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.service-item h3{
+    color: var(--tertiary-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+.service-item p{
+    color: var(--tertiary-color);
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+.service-item > div:hover{
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.service-item > div:hover i, .service-item > div:hover h3, .service-item > div:hover p {
+    color: var(--quaternary-color);
+}
+/* service section ends */
+
+/* main section ends */
+
+
+
+
+/* contact section starts */
+
+.contact-text h2{
+    color: var(--tertiary-color);
+    font-size: 1.90rem;
+    letter-spacing: 0.02rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+}
+.contact-text p{
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-top: 15px;
+    line-height: 1.7rem;
+    font-weight: 400;
+}
+.contact{
+    margin-top: 35px;
+    /* display: flex; */
+    display: grid;
+    grid-template-areas: 
+    'cf cf cf cf ca';
+    
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contact-form{
+    grid-area: cf;
+}
+.contact-address{
+    grid-area: ca;
+    padding: 0px 25px;
+}
+.input-box{
+    position: relative;
+    display: inline-block;
+    width: 47.9%;
+
+}
+.input-box:nth-child(1), .input-box:nth-child(3){
+    /* width: 50%; */
+   
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    letter-spacing: 0.01rem;
+    color: var(--tertiary-color);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--tertiary-color);
+    background-color: transparent;
+}
+.input-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    letter-spacing: 0.01rem;
+    padding: 10px 0px;
+    font-size: 1rem;
+    color: var(--tertiary-color);
+    transition: var(--transition);
+}
+
+.input-box input:focus ~ label, .input-box input:valid ~ label{
+    top: -1.1rem;
+    left: 0;
+    font-size: 0.75rem;
+    background-color: transparent;
+}
+.input-box:nth-child(5){
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+.input-box textarea{
+    width: inherit;
+    padding: 30px 0px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    letter-spacing: 0.01rem;
+    color: var(--tertiary-color);
+    border: none;
+    outline: none;
+    resize: none;
+    border-bottom: 1px solid var(--tertiary-color);
+    background-color: transparent;
+}
+
+.input-box textarea:focus ~ label{
+    top: -0.9rem;
+    left: 0;
+    font-size: 0.75rem;
+    background-color: transparent;
+    
+}
+input[type=submit] {
+    background-color: var(--tertiary-color);
+    border: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 10px;
+    color: var(--quaternary-color);
+    transition: var(--transition);
+}
+input[type=submit]:hover {
+    background-color: var(--secondary-color);
+    
+}
+
+.contact-address> div{
+    margin-bottom: 28px;
+    color: var(--tertiary-color);
+}
+
+.contact-address i{
+    margin-right: 18px;
+}
+
+.cantact-address h3{
+    font-size: 1.2rem;
+    letter-spacing: 0.01rem;
+    font-weight: 500;
+}
+
+.contact-address div > div{
+    margin-top: 8px;
+}
+
+.contact-address p{
+    font-size: 0.9rem;
+    letter-spacing: 0.01rem;
+    line-height: 1.3rem;
+}
+
+.copyright{
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--tertiary-color);
+}
+.copyright span{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+/* contact & footer section ends */
+
+
+
+
+/*  side icon starts  */
+.side-icon{
+    display: none;
+}
+
+.side-icon ul {
+    position: fixed;
+    right: 1%;
+    top: 30%;
+    
+}
+
+.side-icon ul li{
+    margin-bottom: 10px;
+}
+
+.side-icon ul li:last-child{
+    margin-bottom: 0px;
+}
+
+.side-icon ul li a i{
+    background-color: var(--tertiary-color);
+    color: #000000;
+    font-size: 1rem;
+    padding: 5px !important;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.side-icon ul li a i:first-child{
+    padding: 5px 7px;
+}
+
+.side-icon .fa-instagram:hover{
+    color: #D64164;
+    transform: scale(1.1);
+}
+
+.side-icon .fa-facebook:hover{
+    color: #0765FF;
+    transform: scale(1.1);
+}
+
+.side-icon .fa-twitter:hover{
+    color: #1C96E8;
+    transform: scale(1.1);
+}
+/* side icon ends  */

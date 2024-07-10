@@ -1,0 +1,234 @@
+@media screen and (max-width: 1400px) {
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+            /* about section starts  */
+    .about-content{
+        flex-direction: column;
+    }
+    .about-img{
+        margin-right: 0px;
+    }
+    .about-text{
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+            /* about scetion ends */
+            /* contact starts */
+    .input-box{
+        width: 100%;
+    }
+            /* contact ends */
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    .section-padding{
+        padding: 40px;
+    }
+
+            /* nav starts */
+    .navbar-brand{
+        flex-basis: 20%;
+    }
+
+    .navbar-nav{
+        flex-basis: 80%;
+    }
+
+    .navbar-nav ul{
+        gap: 20px;
+    }
+
+    .nav-icon{
+        display: none;
+    }
+            /* nav ends */
+
+            /* side-icon starts */
+    .side-icon{
+        display: inline-block;
+    }
+            /* side-icon ends */
+
+            /* heading section starts  */
+    #heading-section div{
+        margin: 270px 0px 60px;
+    }
+            /* heading section ends */
+
+            /* about section starts */
+    
+    .about-text h2{
+        font-size: 1.50rem;
+    }
+    .about-text p{
+        font-size: 1rem;
+    }
+            /* about section ends */
+
+            /* portfoio starts */
+    .portfolio-images{
+         grid-template-columns: auto auto ;
+                
+    }
+    .portfolio-text h2, .service-text h2, .contact-texth2{
+        font-size: 1.50rem;
+    }
+    .portfolio-text p, .service-text p, .contact-text p{
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+            /* portfolio ends */
+            /* service starts */
+        .service-item{
+        grid-template-columns: auto auto;
+    }
+            /* service ends */
+            /* contact starts */
+    .contact{
+        grid-template-areas: 
+        'cf'
+        'ca';
+    }
+    .contact-address{
+        margin-top: 15px;
+    }
+    /* .contact-text h2{
+        font-size: 1.50rem;
+    }
+    .contact-text p{
+        font-size: 1rem;
+    } */
+     #contact-section {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+     }
+            /* contact ends */
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+            /* nav starts  */
+    .nav-toggle{
+        display: inline-block;
+    }
+    .nav-toggle:hover .toggle-content{
+        display: block;
+    }
+    .navbar-nav{
+        display: none;
+    }
+            /* nav ends */
+
+            /* heading section starts */
+    #heading-section h1{
+        font-size: 3.8rem ;
+        margin-top: 15px;
+    }
+    
+            /* heading section ends */
+            /* portfoio starts */
+    .portfolio-images{
+        grid-template-columns: auto ;
+                
+     }
+     .portfolio{
+        margin-top: 30px;
+     }
+
+    .portfolio-nav ul li a{
+        font-size: 0.8rem;
+    }
+    .portfolio-images{
+        margin-top: 20px;
+        gap: 15px;
+    }
+            /* portfolio ends */
+            /* service starts */
+    .service-item{
+        gap: 15px;
+    }
+    .service-item p{
+        font-size: 0.8rem;
+    }
+            /* service ends */
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    .section-padding{
+        padding: 30px;
+    }
+
+            /* heading sectionstarts */
+    #heading-section div{
+        margin: 250px 0px 20px;
+    }
+
+    #heading-section p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #heading-section h1{
+        font-size: 3.2rem ;
+    }
+            /* heading section ends */
+
+            /* about section starts */
+    .about-text{
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    
+    .about-text p{
+        font-size: 1.2rem;
+        margin-top: 8px;
+        line-height: 1.5rem;
+    }
+            /* about section ends */
+            /* service starts */
+    .service-item{
+        grid-template-columns: auto;
+    }
+    .service-item > div {
+        padding: 15px;
+    }
+    .service-item h3, .service-item i{
+        font-size: 1rem;
+    }
+            /* service ends */
+            /* contact starts */
+    
+    .contact-address{
+        margin-top: 20px;
+    }
+            /* contact ends */
+}
+
+
+
+@media screen and (max-width: 450px) {
+            /* about section starts */
+    .about-text p{
+        font-size: 1rem;
+    }
+    .about-text ul li{
+        line-height: 1.5rem;
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+            /* about section ends */
+}
